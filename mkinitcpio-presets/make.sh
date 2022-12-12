@@ -9,15 +9,16 @@ else
 fi
 
 echo "proses backup"
-
-mv /etc/mkinitcpio.d /etc/mkinitcpio.d.bak
-
-mv /etc/mkinitcpio.conf /etc/mkinitcpio.conf.bak
-
-cp --recursive --force --remove-destination --no-dereference --preserve=links . /etc/
-
+sudo mv /etc/mkinitcpio.d /etc/mkinitcpio.d.bak
+sudo mv /etc/mkinitcpio.conf /etc/mkinitcpio.conf.bak
 echo "backup success"
+echo " "
+
+echo "proses copy file"
+cp --recursive --force --remove-destination --no-dereference --preserve=links . /etc/
+echo "success copy file"
+echo " "
 
 mkinitcpio -p linux
 
-echo "all done okey"
+echo "all done enjoy"
