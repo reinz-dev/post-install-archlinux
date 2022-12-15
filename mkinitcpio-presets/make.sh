@@ -20,5 +20,5 @@ echo "success copy file"
 echo " "
 
 mkinitcpio -p linux
-
+echo " "
 echo "all done enjoy"
