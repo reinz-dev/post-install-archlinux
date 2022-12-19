@@ -10,11 +10,11 @@ if [[ "$?" != 0 ]]; then
     echo $(pwd)
     git reset --hard HEAD
     git pull
-    bash ./install_boot.sh
+    bash ./install-boot.sh
   fi
 else
   echo $(pwd)
   cd boot-linux-efi
   echo $(pwd)
-  bash ./install_boot.sh
+  bash ./install-boot.sh
 fi
