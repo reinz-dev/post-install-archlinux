@@ -5,17 +5,23 @@ pacman -S kitty fish neofetch ranger tmux exa
 chsh -s /usr/bin/fish
 echo " ##-------| all done |-------##"
 echo " "
+
 echo "##-------| installing starhip-shell |-------##"
 curl -sS https://starship.rs/install.sh | sh
 echo "##-------| starhip done |-------##"
 echo " "
+
 echo "##-------| clone dotfiles |-------##"
 git clone http://github.com/reinzcity/dotfiles.git
 cd dotfiles
 yes | cp -rf . ~/.config/
 echo "##-------| dotfiles done |-------##"
 echo " "
+
 echo "##-------| installing homebrew linux |-------##"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+echo 'eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)' \ >> ~/.config/fish/config.fish
 echo "##-------| homebrew done |-------##"
+brew -v
 exit
