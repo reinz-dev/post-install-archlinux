@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "##-------| installing |-------##"
+pacman -S kitty fish neofetch ranger tmux exa
+echo " ##-------| all done |-------##"
+echo " "
+echo "##-------| installing starhip-shell |-------##"
+curl -sS https://starship.rs/install.sh | sh
+echo "##-------| starhip done |-------##"
+echo " "
+echo "##-------| installing homebrew linux |-------##"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo "##-------| homebrew done |-------##"
+echo " "
+echo "##-------| clone dotfiles |-------##"
+git clone http://github.com/reinzcity/dotfiles.git
+cd dotfiles
+cp -rf dotfile/ . ~/.config/
+echo "##-------| dotfiles done to copy |-------##"
+exit
