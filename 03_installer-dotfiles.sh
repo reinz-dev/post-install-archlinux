@@ -12,6 +12,7 @@ echo "##-------| starhip done |-------##"
 echo " "
 
 echo "##-------| clone dotfiles |-------##"
+cd $HOME
 git clone http://github.com/reinzcity/dotfiles.git
 cd dotfiles
 yes | cp -rf . ~/.config/
