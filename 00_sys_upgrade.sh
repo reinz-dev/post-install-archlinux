@@ -8,6 +8,8 @@ else
     echo "USER IS ROOT"
 fi
 
+cd $HOME
+
 ## update pacman
 echo "update system"
 pacman -Syu && pacman -Syyu
