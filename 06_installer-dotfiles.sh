@@ -14,7 +14,6 @@ paru -S ntfs-3g
 echo "installing terminal"
 sudo pacman -S kitty fish neofetch ranger tmux exa
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
-chsh -s /usr/bin/fish
 
 ## installing starship shell
 echo "installing startship"
@@ -59,6 +58,8 @@ mkdir $HOME/.local/share/nvim/site/pack/packer/start/tokyonight.nvim/lua/
 cd $HOME/dotfiles/.repo/lua
 cp -rf . $HOME/.local/share/nvim/site/pack/packer/start/tokyonight.nvim/lua/
 cd $HOME
+
+chsh -s /usr/bin/fish
 
 echo " "
 echo "<<----======== ALL DONE SUCCESS INSTALL ========---->>"
