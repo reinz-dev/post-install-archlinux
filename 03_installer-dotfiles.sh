@@ -5,6 +5,7 @@ sudo pacman -S --needed base-devel
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
+sudo rm -rf $HOME/paru
 
 paru -Syu && paru -Sua
 
