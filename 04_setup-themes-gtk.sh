@@ -4,6 +4,8 @@ cd $HOME
 
 if [[ "$?" != 0 ]]; then
   if [[ -d "dotfiles" ]]; then
+    sudo pacman -Rns nautilus
+    sudo pacman -S nautilus
     echo $(pwd)
     cd dotfiles
     echo $(pwd)
@@ -11,13 +13,14 @@ if [[ "$?" != 0 ]]; then
     echo $(pwd)
     cd WhiteSur-gtk-theme
     ./install.sh -l
-    ./install.sh -g -b
-    ./install.sh -F
     ./install.sh -N glassy
-    ./install.sh -f alt
-
+    sudo ./tweak.sh -g
+    sudo ./tweak.sh -F
+    sudo ./tweak.sh -f alt
   fi
 else
+    sudo pacman -Rns nautilus
+    sudo pacman -S nautilus
     echo $(pwd)
     cd dotfiles
     echo $(pwd)
@@ -25,10 +28,10 @@ else
     echo $(pwd)
     cd WhiteSur-gtk-theme
     ./install.sh -l
-    ./install.sh -g -b
-    ./install.sh -F
     ./install.sh -N glassy
-    ./install.sh -f alt
+    sudo ./tweak.sh -g
+    sudo ./tweak.sh -F
+    sudo ./tweak.sh -f alt
 fi
 
 cd WhiteSur-icon-theme
