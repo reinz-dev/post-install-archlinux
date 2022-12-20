@@ -56,7 +56,7 @@ git clone http://github.com/reinzcity/nvim-2.0
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 mkdir $HOME/.config/nvim
 cd nvim-2.0
-cp -rf . ~/.config/nvim/
+cp -rf . $HOME/.config/nvim/
 
 cd $HOME
 rm -rf $HOME/nvim-2.0
@@ -66,5 +66,11 @@ rm -rf $HOME/.local/share/nvim/site/pack/packer/start/tokyonight.nvim/lua/
 mkdir $HOME/.local/share/nvim/site/pack/packer/start/tokyonight.nvim/lua/
 cd $HOME/dotfiles/.repo/lua
 cp -rf . $HOME/.local/share/nvim/site/pack/packer/start/tokyonight.nvim/lua/
+cd $HOME
 
-
+echo " "
+echo "<<----======== ALL DONE SUCCESS INSTALL ========---->>"
+echo " "
+echo "you need restart terminal"
+echo " "
+echo " "
