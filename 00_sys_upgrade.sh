@@ -16,7 +16,7 @@ pacman -S --needed base-devel
 ## install and update paru aur
 git clone https://aur.archlinux.org/paru.git
 cd paru
-makepkg -si
+sudo makepkg -si
 rm -rf $HOME/paru
 paru -Syu && paru -Sua
 
