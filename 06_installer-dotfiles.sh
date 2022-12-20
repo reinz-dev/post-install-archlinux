@@ -2,7 +2,6 @@
 
 ## installing package paru
 echo "installing package paru"
-paru -S nerd-fonts-complete
 paru -S extension-manager
 paru -S gnome-shell-extension-blur-my-shell
 paru -S gnome-shell-extension-dash-to-dock
@@ -27,6 +26,11 @@ cd $HOME
 git clone http://github.com/reinzcity/dotfiles.git
 cd dotfiles
 yes | cp -rf . ~
+
+## installing font
+cd $HOME/dotfiles/.fonts
+cp -rf . /usr/share/fonts/TTF/
+cd $HOME
 
 ## installing homebrew-linux
 echo "installing homebrew-linux"
