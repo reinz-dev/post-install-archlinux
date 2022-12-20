@@ -4,9 +4,9 @@ cd $HOME
 
 git clone https://github.com/reinzcity/boot-linux-efi.git
 if [[ "$?" != 0 ]]; then
-    if [[ -d "linux-boot-efi" ]]; then
+    if [[ -d "boot-linux-efi" ]]; then
         echo $(pwd)
-        cd linux-boot-efi
+        cd boot-linux-efi
         echo $(pwd)
         git reset --hard HEAD
         git pull
@@ -14,7 +14,7 @@ if [[ "$?" != 0 ]]; then
     fi
 else
     echo $(pwd)
-    cd linux-boot-efi
+    cd boot-linux-efi
     echo $(pwd)
     bash ./install-boot.sh
 fi
