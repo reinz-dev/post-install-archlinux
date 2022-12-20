@@ -1,17 +1,5 @@
 #!/bin/bash
 
-## update pacman
-echo "update system"
-sudo pacman -Syu && sudo pacman -Syyu
-sudo pacman -S --needed base-devel
-
-## install and update paru aur
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si
-sudo rm -rf $HOME/paru
-paru -Syu && paru -Sua
-
 ## installing package paru
 echo "installing package paru"
 paru -S nerd-fonts-complete
