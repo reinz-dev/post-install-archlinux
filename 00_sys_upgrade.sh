@@ -10,13 +10,13 @@ fi
 
 ## update pacman
 echo "update system"
-sudo pacman -Syu && sudo pacman -Syyu
-sudo pacman -S --needed base-devel
+pacman -Syu && pacman -Syyu
+pacman -S --needed base-devel
 
 ## install and update paru aur
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
-sudo rm -rf $HOME/paru
+rm -rf $HOME/paru
 paru -Syu && paru -Sua
 
