@@ -8,7 +8,7 @@ else
     echo "USER IS ROOT"
 fi
 
-cd $HOME
+cd ../
 
 ## update pacman
 echo "update system"
@@ -18,7 +18,7 @@ pacman -S --needed base-devel
 ## install and update paru aur
 git clone https://aur.archlinux.org/paru.git
 cd paru
-sudo makepkg -si
+makepkg -si
 rm -rf $HOME/paru
 paru
 
