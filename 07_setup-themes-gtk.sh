@@ -14,9 +14,9 @@ if [[ "$?" != 0 ]]; then
     cd WhiteSur-gtk-theme
     ./install.sh -l
     ./install.sh -N glassy
-    sudo ./tweak.sh -g
-    sudo ./tweak.sh -F
-    sudo ./tweak.sh -f alt
+    ./tweak.sh -g
+    ./tweak.sh -F
+    ./tweak.sh -f alt
   fi
 else
     sudo pacman -Rns nautilus
@@ -29,9 +29,9 @@ else
     cd WhiteSur-gtk-theme
     ./install.sh -l
     ./install.sh -N glassy
-    sudo ./tweak.sh -g
-    sudo ./tweak.sh -F
-    sudo ./tweak.sh -f alt
+    ./tweak.sh -g
+    ./tweak.sh -F
+    ./tweak.sh -f alt
 fi
 
 cd WhiteSur-icon-theme
