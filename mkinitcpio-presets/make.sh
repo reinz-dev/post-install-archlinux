@@ -1,21 +1,8 @@
 #!/bin/bash
 
-if [[ "$UID" != 0 ]]; then
-    echo "USER NOT ROOT"
-    sudo su
-    exit
-else
-    echo "USER IS ROOT"
-fi
-
-echo "proses backup"
-sudo mv /etc/mkinitcpio.d /etc/mkinitcpio.d.bak
-sudo mv /etc/mkinitcpio.conf /etc/mkinitcpio.conf.bak
-echo "backup success"
-echo " "
-
 echo "proses copy file"
-cp --recursive --force --remove-destination --no-dereference --preserve=links . /etc/
+yes | cp -rf mkinitcpio.d/ /etc/
+yes | cp -rf mkinitcpio.conf /etc/
 echo "success copy file"
 echo " "
 
